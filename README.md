@@ -1,16 +1,26 @@
-# Roommate Compatibility Scorer
+# 🧑‍🤝‍🧑 Roommate Compatibility Scorer
 
-This project is a web application that calculates the compatibility score between two roommates based on their preferences.
+This project is a web application that calculates the compatibility score between two roommates based on their lifestyle preferences.
 
-## Features:
-- Users can enter their preferences (sleep time, cleanliness, work schedule, food habits).
-- Compatibility score is calculated based on matching preferences.
+## 🌟 Features
 
-## Requirements:
-- Python (Flask framework)
-- HTML, CSS, JavaScript
+- Users enter preferences:
+  - Sleep Time  
+  - Cleanliness  
+  - Work Schedule  
+  - Food Habits
+- Compatibility score (0–100) is calculated using a rule-based algorithm
+- Optionally ranks best matches from a dataset (`roommate_profiles.csv`)
 
-## Running Locally:
-1. Install the required libraries:
-   ```bash
-   pip install flask pandas
+## 🛠️ Tech Stack
+
+- Python (Flask)
+- HTML, CSS
+- JavaScript
+- CSV for mock data
+
+## 🚀 Live Demo
+
+🔗 [roommate-compatibility-scorer.onrender.com](https://roommate-compatibility-scorer.onrender.com)
+
+
