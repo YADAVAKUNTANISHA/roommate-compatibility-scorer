@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Compatibility Scorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Roommate Compatibility Scorer</h1>
+    <form method="POST" action="/calculate">
+        <h2>User 1</h2>
+        <label for="sleep1">Sleep Time:</label>
+        <input type="time" name="sleep1" required><br>
+
+        <label for="cleanliness1">Cleanliness:</label>
+        <select name="cleanliness1" required>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select><br>
+
+        <label for="workSchedule1">Work Schedule:</label>
+        <select name="workSchedule1" required>
+            <option value="day">Day</option>
+            <option value="night">Night</option>
+            <option value="flexible">Flexible</option>
+        </select><br>
+
+        <label for="foodHabits1">Food Habits:</label>
+        <select name="foodHabits1" required>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+            <option value="vegan">Vegan</option>
+        </select><br>
+
+        <h2>User 2</h2>
+        <label for="sleep2">Sleep Time:</label>
+        <input type="time" name="sleep2" required><br>
+
+        <label for="cleanliness2">Cleanliness:</label>
+        <select name="cleanliness2" required>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select><br>
+
+        <label for="workSchedule2">Work Schedule:</label>
+        <select name="workSchedule2" required>
+            <option value="day">Day</option>
+            <option value="night">Night</option>
+            <option value="flexible">Flexible</option>
+        </select><br>
+
+        <label for="foodHabits2">Food Habits:</label>
+        <select name="foodHabits2" required>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+            <option value="vegan">Vegan</option>
+        </select><br>
+
+        <button type="submit">Calculate Compatibility</button>
+    </form>
+
+    {% if score is not none %}
+        <h2>Compatibility Score: {{ score }}</h2>
+    {% endif %}
+</body>
+</html>
